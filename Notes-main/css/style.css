@@ -1,0 +1,262 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 150vh;
+    min-width: 80vh;
+    background: #f9f9f9;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  
+  .add-box {
+    background: #b070cc;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  .add-box:hover {
+    background: #a434d4;
+  }
+  
+  /* Popup Box */
+  .popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .popup-box.show {
+    display: flex;
+  }
+  
+  .popup-box header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #b070cc;
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  .popup-box header p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .popup-box header .close-icon {
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .popup-box form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+  }
+  
+  .popup-box form input,
+  .popup-box form textarea,
+  .popup-box form .reminder input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: inherit;
+  }
+  
+  .popup-box form textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  .popup-box form .reminder label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .popup-box form button {
+    padding: 16px;
+    background: #b070cc;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .popup-box form button:hover {
+    background: #b070cc;
+  }
+  
+  /* Notes Container */
+  .notes {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .note {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px 25px;
+  }
+  
+  .note .details p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .note .details span {
+    display: block;
+    font-size: 18px;
+    color: #666;
+    margin-top: 12px;
+  }
+  
+  .note .bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .note .bottom-content span {
+    font-size: 16px;
+    color: #999;
+    
+  }
+  
+  .note .settings {
+    position: relative;
+  }
+  
+  .note .settings i {
+    font-size: 22px;
+    color: #b070cc;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .note .settings i:hover {
+    color: #b070cc;
+  }
+  
+  .note .menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+  }
+  
+  .note .menu.show {
+    display: flex;
+  }
+  
+  .note .menu li {
+    padding: 12px 18px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .note .menu li:hover {
+    background: #f1f1f1;
+  }
+
+  .edit-btn{
+    background: #b070cc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 1px;
+  }
+
+  .delete-btn{
+    background: #d0af46;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 1px;
+  }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .popup-box {
+      width: 95%;
+    }
+  
+    .add-box {
+      font-size: 18px;
+      padding: 12px 18px;
+    }
+  
+    .popup-box form input,
+    .popup-box form textarea,
+    .popup-box form .reminder input {
+      font-size: 16px;
+      padding: 12px 16px;
+    }
+  
+    .popup-box form button {
+      font-size: 18px;
+      padding: 14px;
+    }
+  
+    .note .details p {
+      font-size: 20px;
+    }
+  
+    .note .details span {
+      font-size: 16px;
+    }
+  }
+
+  .reminder-time {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }
+
+
+  

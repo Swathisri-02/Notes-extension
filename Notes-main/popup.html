@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/poppins.css" />
+  </head>
+
+  <body>
+    <!-- Add Note Button -->
+    <div class="add-box">Add Note</div>
+
+    <!-- Popup for Adding/Editing Notes -->
+    <div class="popup-box">
+      <header>
+        <p>Add a New Note</p>
+        <i class="close-icon">&times;</i>
+      </header>
+      <form>
+        <input type="text" placeholder="Title" id="title" />
+        <textarea placeholder="Description" id="description"></textarea>
+        <div class="reminder">
+          <label for="reminder">Reminder:</label>
+          <input type="datetime-local" id="reminder" />
+        </div>
+        <button type="submit" id="addBtn">Add Note</button>
+      </form>
+    </div>
+
+    <!-- Notes Container -->
+    <div class="notes"></div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
